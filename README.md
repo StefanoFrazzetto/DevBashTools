@@ -6,7 +6,7 @@ A collection of bash scripts to automate repetitive tasks.
 
 1. Clone this repo in your _home directory_
 ```bash
-git clone https://github.com/StefanoFrazzetto/DevBashTools
+git clone https://github.com/StefanoFrazzetto/DevBashTools tools
 ```
 
 2. Append the following to your `.bash_profile`
