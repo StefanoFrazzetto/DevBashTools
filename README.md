@@ -25,11 +25,11 @@ Take a screenshot or record a video through ADB of a device connected via USB.
 
 Screenshot
 ```bash
-$ adb_screenshot
+$ adb_screenshot [file-prefix]
 ```
 
 Record screen
 ```bash
-$ MSYS_NO_PATHCONV=1 adb_record_screen
+$ MSYS_NO_PATHCONV=1 adb_record_screen [file-prefix]
 ```
 Note: `MSYS_NO_PATHCONV=1` is used to prevent MSys from translating paths; details [here](https://stackoverflow.com/a/34386471).

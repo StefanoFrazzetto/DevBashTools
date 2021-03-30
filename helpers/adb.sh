@@ -37,7 +37,7 @@ function adb_record_screen {
     }
 
     record(){
-        prefix="recording"
+        prefix="$1"
         fileName="$(string_append_timestamp ${prefix}).mp4"
 
         printf "\n%*s\n" $((0)) "Starting new recording: $fileName"
@@ -45,6 +45,13 @@ function adb_record_screen {
         adb -d shell screenrecord /sdcard/$fileName || adb shell echo \04
     }
 
+    if [ $# -eq 0 ]
+    then
+      name="recording"
+    else
+      name="$1"
+    fi
+
     remove_rec
-    record && wait && exitScript
+    record "$name" && wait && exitScript
 }
